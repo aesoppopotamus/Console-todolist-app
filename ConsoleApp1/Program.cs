@@ -18,7 +18,7 @@ namespace ToDoListApp
 
                 if (choice == "1")
                 {
-                    Console.Write("Enter the to-do itme: ");
+                    Console.Write("Enter the to-do item: ");
                     string toDoItem = Console.ReadLine();
                     AddItem(toDoList, toDoItem);
                 }
@@ -34,7 +34,7 @@ namespace ToDoListApp
                 }
                 else
                 {
-                    Console.WriteLine("Invalid choice. Please try again.")
+                    Console.WriteLine("Invalid choice. Please try again.");
                 }
             }
         }
@@ -60,3 +60,15 @@ namespace ToDoListApp
             Console.WriteLine("Item deleted.");
             ShowToDoList(toDoList);
         }
+
+        static void ShowToDoList(List<string> toDoList)
+        {
+            Console.WriteLine("To-do list:");
+            for (int i = 0; i < toDoList.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {toDoList[i]}");
+            }
+        }
+    }
+
+}
